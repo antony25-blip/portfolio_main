@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+
+
+body {
+  @apply bg-darkBg text-slate-100 antialiased;
+  cursor: none; /* hide default cursor */
+}
+
+/* smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* glassmorphism card */
+.glass-card {
+  @apply bg-white/5 dark:bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl;
+}
+.hero-glow {
+  background: radial-gradient(
+    circle at center,
+    rgba(56, 189, 248, 0.45),
+    rgba(15, 23, 42, 0.9) 60%,
+    #020617 80%
+  );
+}
