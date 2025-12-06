@@ -2,13 +2,14 @@ import { motion } from "framer-motion";
 import MagneticButton from "../components/MagneticButton.jsx";
 import pj1 from "../assets/pj1.png";
 import pj3 from "../assets/pj3.png";
+import pj2 from "../assets/pj2.png";
 
 
 const projects = [
     {
       title: "AI-based Plagiarism Checker",
       description:
-        "An AI-powered plagiarism detection tool that compares a single document against multiple files using sentence segmentation and sequence-matching techniques built with Python's difflib library.",
+        "Developed a Python-based tool to detect plagiarism by comparing a source document against multiple files. Implemented sentence segmentation and utilized the 'difflib' library's 'SequenceMatcher' for efficient text similarity scoring.",
       tech: ["Python", "difflib", "Flask", "NLP"],
       live: "https://plagiarism-checker-3-6aiw.onrender.com",
       github: "https://github.com/antony25-blip/plagiarism_checker",
@@ -16,13 +17,22 @@ const projects = [
     },
   
     {
-      title: "Phishing URL Detector (Cipher Defend)",
+      title: "Sentinal Connect",
       description:
-        "A messaging web app that detects phishing URLs and helps protect minors by locking suspicious links behind a parent-set passcode. It also detects offensive words sent by minors and alerts their parents to prevent cyberbullying.",
-      tech: ["ML", "URL Analysis", "Flask/Node", "Web App"],
-      live: "https://cipher-defend.onrender.com",
-      github: "https://github.com/antony25-blip/whatsappclone",
-      image: null,
+        "Sentinal Connect is a one-to-one encrypted messaging platform with built-in online safety features. It supports profile pictures, emojis, and a simple user dashboard. The app uses two ML models—one to detect phishing URLs (protected by a password-gate for safety) and another to identify cyberbullying or hate speech. Users under 18 must provide a parent’s email, and parents are notified automatically if harmful or abusive behaviour is detected.",
+        tech: [
+          "React",
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "Socket.io",
+          "JWT Auth",
+          "bcrypt Hashing",
+          "AES Encryption",
+        ],
+      live: "https://sentinal-connect.vercel.app/",
+      github: "https://github.com/antony25-blip/sentinal-connect",
+      image: pj2,
     },
   
     {
@@ -48,6 +58,7 @@ const projects = [
   
   
 export default function Projects() {
+
   return (
     <section id="projects" className="scroll-mt-24">
       <div className="text-center mb-10">
@@ -95,9 +106,12 @@ export default function Projects() {
             <h3 className="text-lg font-semibold text-slate-100">
               {project.title}
             </h3>
-            <p className="mt-2 text-sm text-slate-400">
+            <div
+              className="mt-2 h-16 overflow-y-auto pr-2 text-sm text-slate-400"
+            >
               {project.description}
-            </p>
+            </div>
+
 
             <div className="mt-4 flex flex-wrap gap-2">
               {project.tech.map((t) => (
