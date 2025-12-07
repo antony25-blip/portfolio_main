@@ -3,60 +3,61 @@ import MagneticButton from "../components/MagneticButton.jsx";
 import pj1 from "../assets/pj1.png";
 import pj3 from "../assets/pj3.png";
 import pj2 from "../assets/pj2.png";
+import pj4 from "../assets/pj4.png";
 
 
 const projects = [
-    {
-      title: "AI-based Plagiarism Checker",
-      description:
-        "Developed a Python-based tool to detect plagiarism by comparing a source document against multiple files. Implemented sentence segmentation and utilized the 'difflib' library's 'SequenceMatcher' for efficient text similarity scoring.",
-      tech: ["Python", "difflib", "Flask", "NLP"],
-      live: "https://plagiarism-checker-3-6aiw.onrender.com",
-      github: "https://github.com/antony25-blip/plagiarism_checker",
-      image: pj1,
-    },
-  
-    {
-      title: "Sentinal Connect",
-      description:
-        "Sentinal Connect is a one-to-one encrypted messaging platform with built-in online safety features. It supports profile pictures, emojis, and a simple user dashboard. The app uses two ML models—one to detect phishing URLs (protected by a password-gate for safety) and another to identify cyberbullying or hate speech. Users under 18 must provide a parent’s email, and parents are notified automatically if harmful or abusive behaviour is detected.",
-        tech: [
-          "React",
-          "Node.js",
-          "Express",
-          "MongoDB",
-          "Socket.io",
-          "JWT Auth",
-          "bcrypt Hashing",
-          "AES Encryption",
-        ],
-      live: "https://sentinal-connect.vercel.app/",
-      github: "https://github.com/antony25-blip/sentinal-connect",
-      image: pj2,
-    },
-  
-    {
-      title: "Daily Mood & Reflection",
-      description:
-        "A simple self-contained mental health check-in app that asks about mood, energy, stress, and sleep, lets you write a reflection, runs lexicon-based sentiment analysis, and saves recent history in localStorage.",
-      tech: ["JavaScript", "React", "Sentiment Logic", "localStorage"],
-      live: "https://antony25-blip.github.io/mental_healthAI/",
-      github: "https://github.com/antony25-blip/mental_healthAI",
-      image: pj3,
-    },
-  
-    {
-      title: "Air Quality Prediction System",
-      description:
-        "A full-stack ML project that trains a model to predict air quality categories based on environmental features and shows predictions in a clean web UI.",
-      tech: ["Machine Learning", "Python", "Pandas", "Flask/React"],
-      live: "https://air-quality-prediction-ai.vercel.app/",
-      github: "https://github.com/antony25-blip/Air-Quality-Prediction-AI",
-      image: null,
-    },
-  ];
-  
-  
+  {
+    title: "AI-based Plagiarism Checker",
+    description:
+      "Developed a Python-based tool to detect plagiarism by comparing a source document against multiple files. Implemented sentence segmentation and utilized the 'difflib' library's 'SequenceMatcher' for efficient text similarity scoring.",
+    tech: ["Python", "difflib", "Flask", "NLP"],
+    live: "https://plagiarism-checker-3-6aiw.onrender.com",
+    github: "https://github.com/antony25-blip/plagiarism_checker",
+    image: pj1,
+  },
+
+  {
+    title: "Sentinal Connect",
+    description:
+      "Sentinal Connect is a one-to-one encrypted messaging platform with built-in online safety features. It supports profile pictures, emojis, and a simple user dashboard. The app uses two ML models—one to detect phishing URLs (protected by a password-gate for safety) and another to identify cyberbullying or hate speech. Users under 18 must provide a parent’s email, and parents are notified automatically if harmful or abusive behaviour is detected.",
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Socket.io",
+      "JWT Auth",
+      "bcrypt Hashing",
+      "AES Encryption",
+    ],
+    live: "https://sentinal-connect.vercel.app/",
+    github: "https://github.com/antony25-blip/sentinal-connect",
+    image: pj2,
+  },
+
+  {
+    title: "Daily Mood & Reflection",
+    description:
+      "A simple self-contained mental health check-in app that asks about mood, energy, stress, and sleep, lets you write a reflection, runs lexicon-based sentiment analysis, and saves recent history in localStorage.",
+    tech: ["JavaScript", "React", "Sentiment Logic", "localStorage"],
+    live: "https://antony25-blip.github.io/mental_healthAI/",
+    github: "https://github.com/antony25-blip/mental_healthAI",
+    image: pj3,
+  },
+
+  {
+    title: "Air Quality Prediction System",
+    description:
+      "A full-stack ML project that trains a model to predict air quality categories based on environmental features and shows predictions in a clean web UI.",
+    tech: ["Machine Learning", "Python", "Pandas", "Flask/React"],
+    live: "https://air-quality-prediction-ai.vercel.app/",
+    github: "https://github.com/antony25-blip/Air-Quality-Prediction-AI",
+    image: pj4,
+  },
+];
+
+
 export default function Projects() {
 
   return (
@@ -82,25 +83,25 @@ export default function Projects() {
           >
             {/* preview block */}
             {/* Project Cover Image */}
-<div className="mb-5 h-40 w-full overflow-hidden rounded-2xl bg-slate-900/40">
-  {project.image ? (
-    <motion.img
-      src={project.image}
-      alt={project.title}
-      className="h-full w-full object-cover"
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.4 }}
-    />
-  ) : (
-    <motion.div
-      className="flex h-full w-full items-center justify-center rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900"
-      animate={{ opacity: [1, 0.7, 1] }}
-      transition={{ repeat: Infinity, duration: 3 }}
-    >
-      <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-cyan-400 to-sky-500 shadow-glow" />
-    </motion.div>
-  )}
-</div>
+            <div className="mb-5 h-40 w-full overflow-hidden rounded-2xl bg-slate-900/40">
+              {project.image ? (
+                <motion.img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.4 }}
+                />
+              ) : (
+                <motion.div
+                  className="flex h-full w-full items-center justify-center rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900"
+                  animate={{ opacity: [1, 0.7, 1] }}
+                  transition={{ repeat: Infinity, duration: 3 }}
+                >
+                  <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-cyan-400 to-sky-500 shadow-glow" />
+                </motion.div>
+              )}
+            </div>
 
 
             <h3 className="text-lg font-semibold text-slate-100">
