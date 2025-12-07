@@ -50,8 +50,8 @@ const projects = [
       description:
         "A full-stack ML project that trains a model to predict air quality categories based on environmental features and shows predictions in a clean web UI.",
       tech: ["Machine Learning", "Python", "Pandas", "Flask/React"],
-      live: "#",
-      github: "#",
+      live: "https://air-quality-prediction-ai.vercel.app/",
+      github: "https://github.com/antony25-blip/Air-Quality-Prediction-AI",
       image: null,
     },
   ];
